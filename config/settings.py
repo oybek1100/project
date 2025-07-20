@@ -30,11 +30,14 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'railway.app',
-    '127.0.0.1',
+    'web-production-771c.up.railway.app',  # Railway tomonidan berilgan aniq domen
+    '.railway.app',                         # barcha railway subdomenlarga ruxsat uchun
+    '127.0.0.1',                            # localda test qilish uchun
     'localhost',
 ]
 
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 
